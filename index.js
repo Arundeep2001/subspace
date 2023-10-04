@@ -46,7 +46,7 @@ app.get('/api/blog-stats', middleware, (req, res) => {
 
 app.get('/api/blog-search',middleware,(req,res)=>{
 
-    var query = req.query?.title;
+    var query = req.query?.query;
     if(!query){
         return res.status(400).send({
             message:"Failed",
